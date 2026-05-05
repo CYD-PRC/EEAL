@@ -1,6 +1,6 @@
-# EEAL Protocol
+# EEAL (Embrace-Explore-Adapt-LetGo) by EntropyGuard
 
-**Embrace-Explore-Adapt-LetGo: An open protocol for AI permission grading**
+**An open protocol for AI permission grading**
 
 ## What is EEAL?
 
