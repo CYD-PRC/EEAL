@@ -151,14 +151,9 @@ EEAL solves this by providing:
 
 ## 🧩 Contributing
 
-We welcome contributions! Steps:
+We welcome contributions! Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for detailed guidelines.
 
-1. Fork the repository  
-2. Create a branch (`feature/your-feature`)  
-3. Submit a Pull Request  
-4. Discuss via Issues or Discussions for major changes  
-
-See `CONTRIBUTING.md` for detailed guidelines.  
+For questions or suggestions, feel free to open an issue in the repository.
 
 ---
 
