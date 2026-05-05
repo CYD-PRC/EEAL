@@ -28,7 +28,7 @@ License: CC BY 4.0
 EEAL is an open protocol that defines **four permission levels** for AI systems interacting with humans.  
 It ensures that humans retain meaningful control over AI behavior while allowing AI to operate autonomously within defined boundaries.
 
-> "Let all people preserve the right to a dignified exit in the age of AGI."
+> "Let all people preserve the right to a dignified exit in the age of advanced AI systems."
 
 **Key goals:**
 - **Perceivable:** Users can sense the current AI permission level via UI or physical feedback.  
