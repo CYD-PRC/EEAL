@@ -11,19 +11,19 @@ License: CC BY 4.0
 
 ## 📖 Table of Contents
 
-1. [Overview](#overview)  
-2. [The Four Permission Levels](#the-four-permission-levels)  
-3. [Gear Switching (Upgrade / Downgrade)](#gear-switching-upgrade--downgrade)  
-4. [Quick Example](#quick-example)  
-5. [Motivation](#motivation)  
-6. [Reference Implementation](#reference-implementation)  
-7. [Contributing](#contributing)  
-8. [Roadmap](#roadmap)  
-9. [License](#license)  
+- [Overview](#overview)  
+- [The Four Permission Levels](#the-four-permission-levels)  
+- [Gear Switching (Upgrade / Downgrade)](#gear-switching-upgrade--downgrade)  
+- [Quick Example](#quick-example)  
+- [Motivation](#motivation)  
+- [Reference Implementation](#reference-implementation)  
+- [Contributing](#contributing)  
+- [Roadmap](#roadmap)  
+- [License](#license)  
 
 ---
 
-## 🚀 Overview
+<h2 id="overview">🚀 Overview</h2>
 
 EEAL is an open protocol that defines **four permission levels** for AI systems interacting with humans.  
 It ensures that humans retain meaningful control over AI behavior while allowing AI to operate autonomously within defined boundaries.
@@ -36,9 +36,7 @@ It ensures that humans retain meaningful control over AI behavior while allowing
 - **Executable:** Permission levels map directly to AI behavior constraints.  
 - **Implementable:** Can be implemented in any technology stack.
 
----
-
-## 🛠 The Four Permission Levels
+<h2 id="the-four-permission-levels">🛠 The Four Permission Levels</h2>
 
 | Level | Name     | Capability                                      |
 |-------|---------|------------------------------------------------|
@@ -53,9 +51,7 @@ It ensures that humans retain meaningful control over AI behavior while allowing
 - **ADAPT:** AI can act autonomously; results must be reported.  
 - **LET_GO:** AI has full autonomy; humans retain post-action veto power.
 
----
-
-## ⚙️ Gear Switching (Upgrade / Downgrade)
+<h2 id="gear-switching-upgrade--downgrade">⚙️ Gear Switching (Upgrade / Downgrade)</h2>
 
 ```mermaid
 graph TD
@@ -83,9 +79,7 @@ G2 -->|系统故障| G1
 - **Downgrade:** User can downgrade anytime → Triple confirmation recommended  
 - **Fail-safe:** System defaults to **EMBRACE** on failure
 
----
-
-## 💡 Quick Example
+<h2 id="quick-example">💡 Quick Example</h2>
 
 **Sample audit event (JSON):**
 
@@ -128,9 +122,7 @@ ai.upgrade()   # Gear upgraded to 2
 ai.downgrade() # Gear downgraded to 1
 ```
 
----
-
-## 📚 Motivation
+<h2 id="motivation">📚 Motivation</h2>
 
 Current AI systems often lack **fine-grained permission control**.  
 EEAL solves this by providing:
@@ -140,31 +132,23 @@ EEAL solves this by providing:
 - **Safety:** Fail-safe defaults prevent AI overreach  
 - **Flexibility:** Supports multiple domains, from enterprise workflow to multi-model AI platforms
 
----
-
-## 🏗 Reference Implementation
+<h2 id="reference-implementation">🏗 Reference Implementation</h2>
 
 - [EntropyGuard — PRE-GHR digital twin prototype](https://github.com/CYD-PRC/EntropyGuard)  
 *(Code for minimal EEAL implementation and integration examples)*
 
----
-
-## 🧩 Contributing
+<h2 id="contributing">🧩 Contributing</h2>
 
 We welcome contributions! Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for detailed guidelines.
 
 For questions or suggestions, feel free to open an issue in the repository.
 
----
-
-## 📈 Roadmap
+<h2 id="roadmap">📈 Roadmap</h2>
 
 - **v1.1:** Audit log query API, customizable notifications  
 - **v1.2:** Industry compliance modules (finance, healthcare)  
 - **v2.0:** Automated compliance audits, multi-model adaptation
 
----
-
-## 📜 License
+<h2 id="license">📜 License</h2>
 
 EEAL is licensed under **CC BY 4.0** — free to use, modify, and distribute, with attribution.
