@@ -1,5 +1,9 @@
 # EEAL (Embrace-Explore-Adapt-LetGo) Protocol
 
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![GitHub stars](https://img.shields.io/github/stars/CYD-PRC/EEAL?style=social)](https://github.com/CYD-PRC/EEAL/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/CYD-PRC/EEAL)](https://github.com/CYD-PRC/EEAL/issues)
+
 **An open protocol for AI permission grading and human-AI collaboration**  
 License: CC BY 4.0  
 
@@ -140,7 +144,7 @@ EEAL solves this by providing:
 
 ## 🏗 Reference Implementation
 
-- [EntropyGuard — PRE-GHR digital twin prototype](#)  
+- [EntropyGuard — PRE-GHR digital twin prototype](https://github.com/CYD-PRC/EntropyGuard)  
 *(Code for minimal EEAL implementation and integration examples)*
 
 ---
