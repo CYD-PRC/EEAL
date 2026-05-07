@@ -170,5 +170,10 @@ See `CONTRIBUTING.md` for details.
 
 ## 📜 License
 
-EELA is licensed under **CC BY 4.0** — free to use, modify, and distribute, with attribution.
+EEAL is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).  
+You are free to share, copy, redistribute, remix, transform, and build upon this material for any purpose, even commercially, as long as you provide appropriate credit.
+
+Copyright (c) 2026 EESCF
+
+Full license text: [https://creativecommons.org/licenses/by/4.0/legalcode](https://creativecommons.org/licenses/by/4.0/legalcode)
 
