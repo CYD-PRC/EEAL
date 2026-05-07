@@ -1,91 +1,73 @@
-# EEAL (Embrace-Explore-Adapt-LetGo) Protocol
+# EEAL Protocol (Embrace-Explore-Adapt-LetGo)
 
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+**License:** CC BY 4.0
+**Organization:** EESCF
 
-**An open protocol for AI permission grading and human-AI collaboration**
-
----
-
-## 📖 Table of Contents
-
-1. Overview
-2. The Four Permission Levels
-3. Gear Switching (Upgrade / Downgrade)
-4. Quick Example
-5. Motivation
-6. Reference Implementation
-7. Contributing
-8. Roadmap
-9. License
+An open protocol for AI permission grading and human-AI collaboration.
 
 ---
 
-## 🚀 Overview
+## Table of Contents
 
-EELA defines four AI permission levels to regulate human-AI interactions, ensuring humans retain meaningful control while allowing AI autonomy.
-
-> "Let all people preserve the right to a dignified exit in the age of advanced AI systems."
-
-**Key goals:**
-- Perceivable: Users can sense the current AI permission level via UI or physical feedback.
-- Auditable: Every permission change generates an immutable record.
-- Executable: Permission levels map directly to AI behavior constraints.
-- Implementable: Can be implemented in any technology stack.
-
-**Conceptual Operation Cost:**
-- Each gear switch has a conceptual operation cost.
-- Can be measured using steps, logs, or approval times.
-- Emphasizes careful decision-making and conceptual irreversibility, not real energy consumption.
+* Overview
+* Four-Level Permissions
+* Gear Shifts (Upgrade/Downgrade)
+* Quick Example
+* Motivation
+* Reference Implementation
+* Contributing
+* Roadmap
+* License
 
 ---
 
-## 🛠 The Four Permission Levels
+## Overview
 
-| Level | Name     | Capability |
-|-------|---------|------------|
-| 1     | EMBRACE | Query only, no execution |
-| 2     | EXPLORE | Suggestions allowed; user confirms actions |
-| 3     | ADAPT   | Autonomous execution, must report results |
-| 4     | LET_GO  | Full autonomy; all actions are audited |
+EEAL defines four AI permission levels to structure human-AI interaction and ensure humans retain meaningful control while allowing AI autonomy.
 
-> Conceptual operation cost is recorded whenever gears change.
+*"Preserve a dignified exit for everyone in the era of advanced AI systems."*
+
+### Main Objectives:
+
+* **Perceivable:** Users can sense the AI permission level via UI or physical feedback.
+* **Auditable:** Every permission change generates an immutable record.
+* **Executable:** Permission levels directly map to AI behavior constraints.
+* **Implementable:** Can be implemented across any tech stack.
+
+### Conceptual Operation Cost:
+
+* Each gear shift has a conceptual operation cost, measured in steps, logs, or approval time.
+* Emphasizes careful decision-making and conceptual irreversibility, not energy consumption.
 
 ---
 
-## ⚙️ Gear Switching (Upgrade / Downgrade)
+## Four-Level Permissions
 
-```mermaid
-graph TD
-U[User Request] --> G{Current Gear}
-G --> G1[1 EMBRACE]
-G --> G2[2 EXPLORE]
-G --> G3[3 ADAPT]
-G --> G4[4 LET_GO]
+| Level | Name    | Capability                                      |
+| ----- | ------- | ----------------------------------------------- |
+| 1     | Embrace | Read-only queries, no execution                 |
+| 2     | Explore | Suggestions allowed, user confirmation required |
+| 3     | Adapt   | Autonomous execution, must report results       |
+| 4     | LET_GO  | Fully autonomous, all actions auditable         |
 
-G1 -->|AI Upgrade Request, User Approves| G2
-G2 -->|AI Upgrade Request, User Approves| G3
-G3 -->|AI Upgrade Request, User Approves| G4
+Each gear shift records a related conceptual operation cost.
 
-G4 -->|User Downgrade| G3
-G3 -->|User Downgrade| G2
-G2 -->|User Downgrade| G1
+---
 
-G4 -->|System Failure| G1
-G3 -->|System Failure| G1
-G2 -->|System Failure| G1
-```
+## Gear Shifts (Upgrade/Downgrade)
 
 **Rules:**
-- Upgrade: AI requests → User approves → One level at a time
-- Downgrade: User can downgrade anytime → Triple confirmation recommended
-- Fail-safe: Defaults to EMBRACE on failure
-- Each switch increases **conceptual operation cost**
+
+* Upgrade: AI requests → User approval → One-level increase
+* Downgrade: User can downgrade anytime → Recommended triple confirmation
+* Fail-Safe: Defaults to EMBRACE if any operation fails
+* Each shift increases the conceptual operation cost
 
 ---
 
-## 💡 Quick Example
+## Quick Example
 
-**Sample audit event (JSON):**
+**Audit Event Example (JSON):**
 
 ```json
 {
@@ -101,12 +83,10 @@ G2 -->|System Failure| G1
 }
 ```
 
-> `operation_cost` represents conceptual cost (steps, logs, approvals), not real energy.
-
-**Minimal Python example:**
+**Minimal Python Example:**
 
 ```python
-class EELA:
+class EEAL:
     def __init__(self):
         self.gear = 1
 
@@ -124,56 +104,54 @@ class EELA:
         else:
             print("Already at EMBRACE")
 
-ai = EELA()
+ai = EEAL()
 ai.upgrade()   # Gear upgraded to 2, operation_cost=2
 ai.downgrade() # Gear downgraded to 1, operation_cost=1
 ```
 
 ---
 
-## 📚 Motivation
+## Motivation
 
-- Structured control: Four levels to manage AI autonomy
-- Auditability: All actions logged
-- Safety: Fail-safe defaults
-- Flexibility: Supports enterprise workflows and multi-model AI platforms
-- Conceptual operation cost emphasizes the irreversibility of permission changes
-
----
-
-## 🏗 Reference Implementation
-
-- Python + FastAPI + WebSocket prototype
-- Supports gear management, AI calls, upgrade request parsing, and logging
-- Conceptual operation cost tracked for each gear change
+* Structured control: Four levels manage AI autonomy
+* Auditable: All actions are logged
+* Safe: Fail-safe defaults to EMBRACE
+* Flexible: Supports enterprise workflows and multi-model AI platforms
+* Conceptual operation cost: Emphasizes irreversibility of permission changes
 
 ---
 
-## 🧩 Contributing
+## Reference Implementation
 
-1. Fork the repository
-2. Create a branch (`feature/your-feature`)
-3. Submit a Pull Request
-4. Discuss via Issues or Discussions for major changes
-
-See `CONTRIBUTING.md` for details.
+* Python + FastAPI + WebSocket prototype
+* Supports device management, AI calls, upgrade requests, and audit logs
+* Every gear shift records a conceptual operation cost
 
 ---
 
-## 📈 Roadmap
+## Contributing
 
-- v1.1: Audit log query API, customizable notifications
-- v1.2: Industry compliance modules (finance, healthcare)
-- v2.0: Automated compliance audits, multi-model adaptation
+* Fork the repository
+* Create a feature branch (`feature/your-feature`)
+* Submit a pull request
+* Discuss major changes via Issues or Discussions
+* See `CONTRIBUTING.md` for full guidelines
 
 ---
 
-## 📜 License
+## Roadmap
 
-EEAL is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).  
-You are free to share, copy, redistribute, remix, transform, and build upon this material for any purpose, even commercially, as long as you provide appropriate credit.
+* v1.1: Audit log query API, customizable notifications
+* v1.2: Industry compliance modules (Finance, Healthcare)
+* v2.0: Automated compliance auditing, multi-model support
 
-Copyright (c) 2026 EESCF
+---
+
+## License
+
+EEAL is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
+You are free to share, copy, redistribute, remix, transform, and build upon the material for any purpose, even commercially, provided you give appropriate credit.
+
+© 2026 EESCF
 
 Full license text: [https://creativecommons.org/licenses/by/4.0/legalcode](https://creativecommons.org/licenses/by/4.0/legalcode)
-
